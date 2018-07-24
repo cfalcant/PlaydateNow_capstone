@@ -8,8 +8,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Home></Home>
-        <Text>Open up App.js to start working on your app!!</Text>
-        <Text>Changes you make will automatically reload.</Text>
+        {/* <Text>Open up App.js to start working on your app!!</Text> */}
       </View>
     );
   }
