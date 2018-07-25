@@ -9,10 +9,10 @@ export default class Home extends Component {
     render (){
         return (
             <View style = {{
-                flex: 1,
-                alignItems: 'center',
-                marginTop: 20,
-                alignItems: 'stretch'    
+                    flex: 1,
+                    alignItems: 'center',
+                    marginTop: 20,
+                    alignItems: 'stretch'
             }}>
                 <View style = {{flex: 1, backgroundColor: 'blue'}}>
                     <UserInfo/>
@@ -23,7 +23,6 @@ export default class Home extends Component {
                 <View style = {{flex: 1, backgroundColor: 'powderblue'}}>
                     <CreateNewPlaydate/>
                 </View>
-            <TabBarFooter/>
             </View>
         )
     }

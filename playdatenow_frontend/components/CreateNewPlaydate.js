@@ -4,11 +4,11 @@ import { Text, View, StyleSheets } from 'react-native';
 export default class CreateNewPlaydate extends Component {
     render () {
         return (
-            <View>
+            // <View>
                 <Text>
                     Create New Playdate component
                 </Text>
-            </View>
+            // </View>
         )
     }
 }

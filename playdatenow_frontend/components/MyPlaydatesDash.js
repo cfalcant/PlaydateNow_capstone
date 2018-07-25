@@ -4,11 +4,11 @@ import { View, Text, StyleSheets } from 'react-native'
 export default class MyPlaydatesDash extends Component {
     render() {
         return (
-            <View>
+            // <View>
                 <Text>
                     MyPlaydatesDash component
                 </Text>
-            </View>
+            // </View>
         )
     }
 }
