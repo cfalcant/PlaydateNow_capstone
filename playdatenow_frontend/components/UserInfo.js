@@ -8,7 +8,7 @@ export default class UserInfo extends Component {
                 < Text style = {
                     styles.redtext
                 } >
-                    This is the UserInfo component that will appear on the top 1/3 of the page.
+                    UserInfo component
                 </Text>
             </View>
         )
