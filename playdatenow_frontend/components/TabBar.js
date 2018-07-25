@@ -14,25 +14,20 @@ export default class TabBarFooter extends Component {
     render() {
         return ( 
             <Container>
-                <Header/>
                 <Content/>
                 <Footer>
                     <FooterTab>
                         <Button vertical>
-                            <Icon name = "apps" />
-                            <Text > Apps </Text> 
-                        </Button> 
-                        <Button vertical >
-                            <Icon name = "camera" / >
-                            <Text > Camera </Text> 
+                            <Icon name = "home" />
+                            <Text>Home</Text> 
                         </Button> 
                         <Button vertical active >
-                            <Icon active name = "navigate" / >
-                            <Text > Navigate </Text> 
+                            <Icon active name = "people" / >
+                            <Text>Playdates</Text> 
                         </Button> 
                         <Button vertical >
-                            <Icon name = "person" / >
-                            <Text > Contact </Text> 
+                            <Icon name = "settings" / >
+                            <Text >Settings</Text> 
                         </Button> 
                     </FooterTab> 
                 </Footer> 
