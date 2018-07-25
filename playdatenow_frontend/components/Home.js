@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import UserInfo from './UserInfo';
 import MyPlaydatesDash from './MyPlaydatesDash';
 import CreateNewPlaydate from './CreateNewPlaydate';
+import TabBarFooter from './TabBar';
 
 export default class Home extends Component {
     render (){
@@ -22,6 +23,7 @@ export default class Home extends Component {
                 <View style = {{flex: 1, backgroundColor: 'powderblue'}}>
                     <CreateNewPlaydate/>
                 </View>
+            <TabBarFooter/>
             </View>
         )
     }
