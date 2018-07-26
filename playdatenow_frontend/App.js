@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import Home from './components/Home';
 import TabBar from './components/TabBar';
 import Playdates from './components/Playdates';
