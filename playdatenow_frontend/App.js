@@ -4,6 +4,7 @@ import Home from './components/Home';
 import TabBar from './components/TabBar';
 import Playdates from './components/Playdates';
 import Settings from './components/Settings'
+import Login from './components/Login';
 
 
 export default class App extends Component {
@@ -11,7 +12,8 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <View style={{flex:1}}>
-          <Home></Home>
+          <Login></Login>
+          {/* <Home></Home> */}
           {/* <Settings></Settings> */}
           {/* <Playdates></Playdates> */}
           {/* <TabBar></TabBar> */}
