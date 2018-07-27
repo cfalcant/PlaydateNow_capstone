@@ -19,10 +19,9 @@ export default class AboutPopUp extends Component {
                         <Icon name='ios-close'/>
                     </Row>
 
-                    <Text>
+                    <Text style={{paddingBottom: 10}}>
                         This will serve as an informational "pop-up" window that can be closed. There will 
-                        be an "x" on the upper right corner that will collapse this window when pressed. 
-                        If possible, place a link at the bottom directing the user to an "About" section or whatever.
+                        be an "x" on the upper right corner that will collapse this window when pressed.
                     </Text>
                     <Button style ={{borderColor:'purple'}}
                           small block bordered rounded >

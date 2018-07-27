@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
+import { Row } from 'native-base'
 import UserInfo from './UserInfo';
 import MyPlaydatesDash from './MyPlaydatesDash';
 import CreateNewPlaydate from './CreateNewPlaydate';
@@ -10,11 +11,17 @@ export default class Home extends Component {
         return (
             <View style = {{
                     flex: 1,
-                    alignItems: 'center',
                     marginTop: 20,
                     alignItems: 'stretch',
                     backgroundColor: '#DF89FB'
             }}>
+                <View style={{
+                    justifyContent: 'center',
+                    alignItems: 'center'}}>
+                <Image
+                    source = {require('../PlaydateNow.png')}/>
+                </View>
+
                 <View style = {{flex: 1}}>
                     <UserInfo/>
                 </View>
