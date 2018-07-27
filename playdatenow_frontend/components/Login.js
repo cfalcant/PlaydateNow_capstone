@@ -11,6 +11,12 @@ import {
 } from 'native-base';
 
 export default class Login extends Component {
+    state = {
+        email: 'Carlos@gmail.com',
+        password: ''
+    }
+
+
     render () {
         return (
             <View style={styles.container}>
@@ -30,24 +36,28 @@ export default class Login extends Component {
 
                     <Item underline>
                         <Input underline
-                            placeholder = 'E-mail address' 
+                            value = {this.state.email}
+                            // placeholder = 'E-mail address' 
                             placeholderTextColor = '#470060'
-                            inp
-
+                            onChangeText={(email)=>this.setState({email})}
+                            
                             />
                     </Item>
                     <Item underline>
-                        <Input underline
+                        <Input  underline
                             placeholder = 'Password'
                             placeholderTextColor = '#470060'
+        
 
                         />
                     </Item>
 
                     <View style={{paddingTop: 10}}>
-                    <Button style={{padding: 20}} rounded success> 
-                    <Text style={{fontSize: 20}}>Submit</Text>
-                    </Button>
+                        <Button style={styles.submitBtnStyling} rounded success
+                                onPress={this.onSumbit}
+                        > 
+                            <Text style={styles.submitBtnText}>Submit</Text>
+                        </Button>
                     </View>
 
 
@@ -78,5 +88,11 @@ const styles = StyleSheet.create({
         marginTop: 20,
         alignItems: 'stretch',
         backgroundColor: '#DF89FB'
+    },
+    submitBtnStlying: {
+        padding: 20
+    },
+    submitBtnText: {
+        fontSize: 20
     },
 })
