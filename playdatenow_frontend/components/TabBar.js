@@ -9,25 +9,35 @@ import {
     Icon,
     Text
 } from 'native-base';
+import { StyleSheet } from "react-native"
+import { Actions } from 'react-native-router-flux'
 
-export default class TabBarFooter extends Component {
+export default class TabBar extends Component {
     render() {
         return ( 
             <Container>
                 <Content/>
                 <Footer>
                     <FooterTab>
-                        <Button vertical>
+                        <Button
+                            onPress={()=> {Actions.Home();}}
+                            vertical>
                             <Icon name = "home" />
-                            <Text>Home</Text> 
+                            <Text style={{color: 'purple'}}>Home</Text> 
                         </Button> 
-                        <Button vertical active >
-                            <Icon active name = "people" / >
-                            <Text>Playdates</Text> 
+                        < Button 
+                            onPress={()=> {Actions.Playdates();}}
+                            vertical 
+                                // active 
+                                >
+                            <Icon active name = "people" />
+                            < Text style = {{color: 'purple'}}>Playdates </Text>
                         </Button> 
-                        <Button vertical >
+                        <Button
+                            onPress={()=>{Actions.Settings();}} 
+                            vertical >
                             <Icon name = "settings" / >
-                            <Text >Settings</Text> 
+                            <Text style={{color: 'purple'}}>Settings</Text> 
                         </Button> 
                     </FooterTab> 
                 </Footer> 

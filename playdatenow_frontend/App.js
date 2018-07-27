@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import {
+  Scene,
+  Router,
+  Actions
+} from 'react-native-router-flux'
 import Home from './components/Home';
 import TabBar from './components/TabBar';
 import Playdates from './components/Playdates';
@@ -7,17 +12,38 @@ import Settings from './components/Settings'
 import Login from './components/Login';
 
 
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         <View style={{flex:11}}>
+//           {/* <Login></Login> */}
+//           <Home></Home>
+//         </View>
+//         <View  style={{flex: 1}}>  
+//           {/* <Settings></Settings> */}
+//           {/* <Playdates></Playdates> */}
+//           <TabBar></TabBar>
+//         </View>
+//       </View>
+//     );
+//   }
+// }
+
 export default class App extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <View style={{flex:1}}>
-          {/* <Login></Login> */}
-          <Home></Home>
-          {/* <Settings></Settings> */}
-          {/* <Playdates></Playdates> */}
-          {/* <TabBar></TabBar> */}
-        </View>
+    return ( 
+      <View style = {styles.container}>
+        <Router hideNavBar='true'>
+          <Scene key="root">
+          <Scene key="Home" component={Home} title="Home" initial/>
+          <Scene key = "Playdates" component = {Playdates} title = "Playdates"/>
+          <Scene key = "Settings" component = {Settings} title = "Settings" />
+          
+          
+          </Scene>
+        </Router>
+        <TabBar/>
       </View>
     );
   }
