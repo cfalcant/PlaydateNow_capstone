@@ -18,8 +18,8 @@ export default class Home extends Component {
                 <View style={{
                     justifyContent: 'center',
                     alignItems: 'center'}}>
-                <Image
-                    source = {require('../PlaydateNow.png')}/>
+                    <Image
+                        source = {require('../PlaydateNow.png')}/>
                 </View>
 
                 <View style = {{flex: 1}}>

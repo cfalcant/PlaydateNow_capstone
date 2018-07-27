@@ -1,6 +1,4 @@
-import React, {
-    Component
-} from 'react';
+import React, {Component} from 'react';
 import {
     View,
     Text,
@@ -14,7 +12,8 @@ export default class Settings extends Component {
                     flex: 1,
                     marginTop: 20,
                     justifyContent: 'center',
-                    backgroundColor: 'green'
+                    alignItems: 'center',
+                    backgroundColor: '#DF89FB'
             }}>
                 <View >
                     <Text> Settings component </Text> 

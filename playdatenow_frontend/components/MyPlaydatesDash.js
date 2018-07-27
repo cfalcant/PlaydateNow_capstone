@@ -5,13 +5,12 @@ import { Container, Content, Text } from 'native-base'
 export default class MyPlaydatesDash extends Component {
     render() {
         return (
-            < Container style={styles.container}
-            >
-                <Content padder
-                >
-                    < Text >
-                        MyPlaydatesDash component 
-                        </Text>
+            < Container style={styles.container}>
+                <Content padder>
+                    <Text>
+                        MyPlaydatesDash 
+                    </Text>
+                    
                 </Content>
             </Container>
         )

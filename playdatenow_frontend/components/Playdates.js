@@ -8,7 +8,9 @@ export default class Playdates extends Component {
                 flex: 1,
                 marginTop: 20,
                 justifyContent: 'center',
+                alignItems: 'center',
                 backgroundColor: 'yellow'
+                // backgroundColor: '#DF89FB'
             }}>
                 < View>
                     < Text>Playdates component </Text>
