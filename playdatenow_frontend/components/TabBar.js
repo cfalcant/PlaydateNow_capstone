@@ -15,7 +15,7 @@ import { Actions } from 'react-native-router-flux'
 export default class TabBar extends Component {
     render() {
         return ( 
-            <Container>
+            <Container style={{flex: .091}}>
                 <Content/>
                 <Footer>
                     <FooterTab>

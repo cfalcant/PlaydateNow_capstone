@@ -11,7 +11,7 @@ export default class Home extends Component {
         return (
             <View style = {{
                     flex: 1,
-                    marginTop: 20,
+                    // marginTop: 50,
                     alignItems: 'stretch',
                     backgroundColor: '#DF89FB'
             }}>

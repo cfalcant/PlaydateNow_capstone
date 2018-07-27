@@ -6,7 +6,6 @@ export default class Playdates extends Component {
         return (
             <View style = {{
                 flex: 1,
-                marginTop: 20,
                 justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: 'yellow'

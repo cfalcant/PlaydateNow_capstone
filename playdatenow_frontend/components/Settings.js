@@ -10,7 +10,6 @@ export default class Settings extends Component {
         return ( 
             <View style = {{
                     flex: 1,
-                    marginTop: 20,
                     justifyContent: 'center',
                     alignItems: 'center',
                     backgroundColor: '#DF89FB'

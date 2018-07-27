@@ -13,13 +13,13 @@ import {
 export default class AboutPopUp extends Component {
     render () {
         return (
-            <Container style={{paddingLeft: 10, paddingRight: 10, borderRadius: 5}}>
+            <Container style={{paddingLeft: 4, paddingRight: 4, borderRadius: 5}}>
                 <Content>
                     <Row style={{justifyContent: 'flex-end'}}>
                         <Icon name='ios-close'/>
                     </Row>
 
-                    <Text style={{paddingBottom: 10}}>
+                    <Text style={{paddingBottom: 2}}>
                         This will serve as an informational "pop-up" window that can be closed.
                     </Text>
                     <Button style ={{borderColor:'purple'}}
