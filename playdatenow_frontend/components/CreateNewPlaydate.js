@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheets } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { Container, Content, Text } from 'native-base'
 
 export default class CreateNewPlaydate extends Component {
     render () {
         return (
-            // <View>
-                <Text>
-                    Create New Playdate component
-                </Text>
-            // </View>
+            <Container style={styles.container}>
+                <Content padder>
+                    <Text>
+                        Create New Playdate component
+                    </Text>
+                </Content>
+            </Container>
         )
     }
 }
+
+styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#DF89FB'
+    },
+})

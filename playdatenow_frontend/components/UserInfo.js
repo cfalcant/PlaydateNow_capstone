@@ -9,7 +9,10 @@ export default class UserInfo extends Component {
     render() {
         return (
             <View style={{flex: 1}}>
-                < Text style={{fontSize: 25}}>
+                <Text style = {{
+                        fontSize: 25,
+                        color: '#470060'
+                    }}>
                     Hello, {this.state.firstName}!
                 </Text>
                 <AboutPopUp/>  

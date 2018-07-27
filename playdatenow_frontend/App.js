@@ -12,8 +12,8 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <View style={{flex:1}}>
-          <Login></Login>
-          {/* <Home></Home> */}
+          {/* <Login></Login> */}
+          <Home></Home>
           {/* <Settings></Settings> */}
           {/* <Playdates></Playdates> */}
           {/* <TabBar></TabBar> */}
@@ -29,5 +29,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'stretch',
     justifyContent: 'center',
+    // backgroundColor: '#DF89FB'
   },
 });

@@ -12,15 +12,16 @@ export default class Home extends Component {
                     flex: 1,
                     alignItems: 'center',
                     marginTop: 20,
-                    alignItems: 'stretch'
+                    alignItems: 'stretch',
+                    backgroundColor: '#DF89FB'
             }}>
-                <View style = {{flex: 1, backgroundColor: 'blue'}}>
+                <View style = {{flex: 1}}>
                     <UserInfo/>
                 </View>
-                <View style = {{flex:1, backgroundColor: 'skyblue'}}>
+                <View style = {{flex:1}}>
                     <MyPlaydatesDash/>
                 </View>
-                <View style = {{flex: 1, backgroundColor: 'powderblue'}}>
+                <View style = {{flex: 1}}>
                     <CreateNewPlaydate/>
                 </View>
             </View>
