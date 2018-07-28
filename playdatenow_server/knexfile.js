@@ -2,7 +2,7 @@ module.exports = {
     development: {
         client: 'pg',
         connection: {
-            database: "playdatenow",
+            database: "capstone",
             host: "localhost"
         },
         migrations: {
