@@ -17,24 +17,25 @@ componentDidMount() {
          }));
  }
 
- _keyExtractor = (item, index) => item.id;
-
-    render(){
-        return (
-            <View>
+render(){
+    return (
+        <View>
             <FlatList
                 data = {this.state.playdates}
-                 keyExtractor = {this._keyExtractor}
+                // keyExtractor = {(item) => item.toString()}
                 renderItem = {({item}) => 
-                <Text style = {{fontSize: 20}}> 
-
-                    {item.title} 
-                </Text>} 
+                    <View>
+                        <Text style = {{fontSize: 20}}> 
+                        {item.title} 
+                        </Text>
+                    </View>}
+                keyExtractor = {(item, index) => index.toString()}
             />
-            </View>
-        )
-    }
+        </View>
+    )
 }
+}
+
 export default class MyPlaydatesDash extends Component {
     render() {
         return (
