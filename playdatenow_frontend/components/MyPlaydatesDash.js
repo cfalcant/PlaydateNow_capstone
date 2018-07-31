@@ -1,9 +1,22 @@
 import React, { Component} from 'react'
 import { View, StyleSheet, FlatList, ScrollView } from 'react-native'
 import { Container, Content, Text } from 'native-base'
+import axios from 'axios'
 
 
 class MyPlaydatesList extends Component {
+
+state = {
+    playdates: []
+}
+    
+// componentDidMount() {
+//      axios.get('http://localhost:8000/playdates')
+//          .then(response => this.setState({
+//              playdates: response.data
+//          }));
+//  }
+
     render(){
         return (
             <View>
@@ -22,7 +35,7 @@ class MyPlaydatesList extends Component {
                 <Text style = {{fontSize: 20}}> 
                     {item.key} 
                 </Text>} 
-                />
+            />
             </View>
         )
     }
@@ -46,8 +59,9 @@ export default class MyPlaydatesDash extends Component {
 
 styles = StyleSheet.create({
     container: {
-        backgroundColor: '#DF89FB'
+        // backgroundColor: '#DF89FB'
         // backgroundColor: 'red'
+        backgroundColor: 'white'
     },
 
 })

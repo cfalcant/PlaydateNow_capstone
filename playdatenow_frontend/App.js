@@ -10,6 +10,7 @@ import TabBar from './components/TabBar';
 import Playdates from './components/Playdates';
 import Settings from './components/Settings'
 import Login from './components/Login';
+import NewPlaydateForm from './components/NewPlaydateForm';
 
 
 // export default class App extends Component {
@@ -36,9 +37,10 @@ export default class App extends Component {
       <View style = {styles.container}>
         <Router hideNavBar='true'>
           <Scene key="root">
-          <Scene key="Home" component={Home} title="Home" initial/>
-          <Scene key = "Playdates" component = {Playdates} title = "Playdates"/>
+          <Scene key="Home" component={Home} title="Welcome!" initial/>
+          <Scene key = "Playdates" component = {Playdates} title = "Search"/>
           <Scene key = "Settings" component = {Settings} title = "Settings" />
+          <Scene key = "NewPlaydateForm" component={NewPlaydateForm} title= "Add a new playdate"/>
           
           
           </Scene>

@@ -30,8 +30,8 @@ export default class TabBar extends Component {
                             vertical 
                                 // active 
                                 >
-                            <Icon active name = "people" />
-                            < Text style = {{color: 'purple'}}>Playdates </Text>
+                            <Icon active name = "search" />
+                            < Text style = {{color: 'purple'}}>Search </Text>
                         </Button> 
                         <Button
                             onPress={()=>{Actions.Settings();}} 

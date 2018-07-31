@@ -5,6 +5,7 @@ import UserInfo from './UserInfo';
 import MyPlaydatesDash from './MyPlaydatesDash';
 import CreateNewPlaydate from './CreateNewPlaydate';
 import TabBarFooter from './TabBar';
+import NewPlaydateForm from './NewPlaydateForm';
 
 export default class Home extends Component {
     render (){
@@ -19,18 +20,19 @@ export default class Home extends Component {
                     justifyContent: 'center',
                     alignItems: 'center'}}>
                     <Image
-                        source = {require('../PlaydateNow.png')}/>
+                    source = {require('../PlaydateNow.png')}/>
                 </View>
 
                 <View style = {{flex: 1}}>
                     <UserInfo/>
                 </View>
+                < View style = {{flex: 1}}>
+                    <CreateNewPlaydate/>
+                </View>
                 <View style = {{flex:1}}>
                     <MyPlaydatesDash/>
                 </View>
-                <View style = {{flex: 1}}>
-                    <CreateNewPlaydate/>
-                </View>
+                
             </View>
         )
     }

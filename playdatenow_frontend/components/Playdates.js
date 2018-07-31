@@ -12,7 +12,7 @@ export default class Playdates extends Component {
                 // backgroundColor: '#DF89FB'
             }}>
                 < View>
-                    < Text>Playdates component </Text>
+                    < Text>Search component </Text>
                 </View>
             </View>
         )
