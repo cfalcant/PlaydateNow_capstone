@@ -21,6 +21,18 @@ router.get('/', function(req, res, next){
     knex('users').then(users=>res.json(users))
 });
 
+// router.get('/:id/playdates', function (req, res) {
+    // knex('users')
+    //     .join('activeplaydates', 'users.id', '=', 'activeplaydates.user_id')
+    //     .join('playdates', 'playdates.id', '=', 'activeplaydates.playdate_id')
+    //     .select('playdates.place', 'playdates.address', 'playdates.date', 'playdates.activity', 'playdates.notes')
+    //     .where('users.id', req.params.id)
+    //     .then(playdates => {
+    //         // console.log(playdates);
+    //         res.json(playdates);
+    //     });
+// })
+
 router.post('/', function (req, res) {
     knex('users').insert({
         firstname: req.body.firstname,
@@ -32,5 +44,7 @@ router.post('/', function (req, res) {
         res.json(true);
     })
 });
+
+
 
 module.exports= router;
