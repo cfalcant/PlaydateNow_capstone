@@ -10,30 +10,25 @@ state = {
     playdates: []
 }
     
-// componentDidMount() {
-//      axios.get('http://localhost:8000/playdates')
-//          .then(response => this.setState({
-//              playdates: response.data
-//          }));
-//  }
+componentDidMount() {
+     axios.get('http://localhost:8000/playdates')
+         .then(response => this.setState({
+             playdates: response.data
+         }));
+ }
+
+ _keyExtractor = (item, index) => item.id;
 
     render(){
         return (
             <View>
             <FlatList
-                data = {[
-                    {key: 'Devin'},
-                    {key: 'Jackson'},
-                    {key: 'James'},
-                    {key: 'Joel'},
-                    {key: 'John'},
-                    {key: 'Jillian'},
-                    {key: 'Jimmy'},
-                    {key: 'Julie'},
-                ]}
+                data = {this.state.playdates}
+                 keyExtractor = {this._keyExtractor}
                 renderItem = {({item}) => 
                 <Text style = {{fontSize: 20}}> 
-                    {item.key} 
+
+                    {item.title} 
                 </Text>} 
             />
             </View>
