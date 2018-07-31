@@ -1,4 +1,5 @@
-const knex = require("../db/knex.js");
+// const knex = require("../db/knex.js");
+//Above has been edited and moved to "server.js" file
 
 module.exports = {
     // CHANGE ME TO AN ACTUAL FUNCTION
