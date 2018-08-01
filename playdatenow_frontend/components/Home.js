@@ -17,7 +17,7 @@ state = {
                     flex: 1,
                     alignItems: 'stretch',
                     // backgroundColor: '#DF89FB'
-                    backgroundColor: 'purple',
+                    backgroundColor: '#c997fc',
             }}>
                 <View style={{
                     justifyContent: 'center',

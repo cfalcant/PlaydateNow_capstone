@@ -11,7 +11,7 @@ onPress = () => {
 
 render () {
     return (
-        <Container style={{backgroundColor: 'purple'}}>
+        <Container style={{backgroundColor: '#c997fc'}}>
             <Content padder>
                 <View>
                 < Text style = {{fontSize: 25, paddingTop: 10}}>

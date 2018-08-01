@@ -32,8 +32,8 @@ render(){
                         justifyContent: 'space-between',
                         backgroundColor: 'white',
                         borderRadius: 25,
-                        borderColor: 'black',
-                        borderWidth: 1,
+                        borderColor: '#c997fc',
+                        borderWidth: 2,
                         // backgroundColor: '#DF89FB',
                         padding: 20
                     }}>
@@ -45,6 +45,7 @@ render(){
                             name = "delete"
                             size = {20}
                         />
+                    
                     </View>}
             />
         </View>
