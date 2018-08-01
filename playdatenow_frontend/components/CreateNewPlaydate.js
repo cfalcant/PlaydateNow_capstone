@@ -11,7 +11,7 @@ onPress = () => {
 
 render () {
     return (
-        <Container style={styles.container}>
+        <Container style={{backgroundColor: 'purple'}}>
             <Content padder>
                 <View>
                 < Text style = {{fontSize: 25, paddingTop: 10}}>
@@ -26,12 +26,18 @@ render () {
 
                 <View>    
                 <TouchableHighlight 
-                    style={styles.button} 
+                    style={{alignItems: 'center',
+                            borderWidth: 1,
+                            padding: 15,
+                            borderRadius: 25,
+                            backgroundColor: 'white'
+
+                    }} 
                     // onPress={this.onPress}
                     onPress = {() => {Actions.NewPlaydateForm();}}
                     underlayColor='pink'
                 >
-                    <Text>Click here</Text>   
+                    <Text style={{fontSize: 20}}>Click here</Text>   
                 </TouchableHighlight>
                                         
                 </View>
@@ -42,17 +48,5 @@ render () {
 }
 
 styles = StyleSheet.create({
-    container: {
-        // backgroundColor: '#DF89FB',
-        flexDirection: 'column',
-        backgroundColor: 'purple',
-        justifyContent: 'space-evenly'
-    },
-    button: {
-        alignItems: 'center',
-        backgroundColor: '#fff',
-        padding: 20,
-        borderRadius: 10,
-        borderWidth: 1
-    }
+
 })

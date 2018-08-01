@@ -15,7 +15,6 @@ state = {
         return (
             <View style = {{
                     flex: 1,
-                    // marginTop: 50,
                     alignItems: 'stretch',
                     // backgroundColor: '#DF89FB'
                     backgroundColor: 'purple',
@@ -28,7 +27,7 @@ state = {
                 </View>
 
                 <View style = {{flex: 1}}>
-                    <Text style = {{fontSize: 25}}>
+                    <Text style = {{fontSize: 25, paddingLeft: 10, paddingBottom: 5}}>
                         Hello, {this.state.firstname}!
                     </Text>
                     <UserInfo/>

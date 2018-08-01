@@ -31,13 +31,13 @@ render(){
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                         backgroundColor: 'white',
-                        borderRadius: 10,
+                        borderRadius: 25,
                         borderColor: 'black',
                         borderWidth: 1,
                         // backgroundColor: '#DF89FB',
                         padding: 20
                     }}>
-                        <Text style = {{fontSize: 15}}> 
+                        <Text style = {{fontSize:15}}> 
                         {item.title} 
                         </Text>
                      
@@ -55,7 +55,7 @@ render(){
 export default class MyPlaydatesDash extends Component {
     render() {
         return (
-            <Container style={styles.container}>
+            <Container>
                 <Content padder>
                     <Text style={{fontSize: 25}}>
                         My Playdates
