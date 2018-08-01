@@ -12,18 +12,15 @@ state = {
         return (
             <View style = {styles.screenContainer}>
 
-
                 <View style={styles.topContainer}>
                     <Text style={{fontSize: 25}}>
                         Search by zip code:
                     </Text>
-                    <View style={{padding: 15}}>
-
-                    </View>
+                    
 
 
 
-                    <View style={{backgroundColor: 'green', padding: 10, borderWidth: 1, borderRadius: 5}}>
+                    <View style={{backgroundColor: 'pink', padding: 10, borderRadius: 5}}>
 
                         <TextInput
                             style={{height: 80, fontSize: 25}}
@@ -96,11 +93,13 @@ styles = StyleSheet.create({
     },
     topContainer:{
             flex: 1,
+            justifyContent: 'space-around',
             backgroundColor: 'white',
             padding: 10
     },
     bottomContainer: {
             flex: 1, 
+            justifyContent: 'space-evenly',
             backgroundColor: 'blue',
             padding: 10
     },

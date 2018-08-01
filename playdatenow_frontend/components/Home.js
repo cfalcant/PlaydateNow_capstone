@@ -27,7 +27,7 @@ state = {
                 </View>
 
                 <View style = {{flex: 1}}>
-                    <Text style = {{fontSize: 25, paddingLeft: 10, paddingBottom: 5}}>
+                    <Text style = {{fontSize: 25, paddingLeft: 10, paddingBottom: 10}}>
                         Hello, {this.state.firstname}!
                     </Text>
                     <UserInfo/>
