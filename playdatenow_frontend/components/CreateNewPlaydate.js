@@ -13,37 +13,46 @@ render () {
     return (
         <Container style={styles.container}>
             <Content padder>
-                <Text>
-                    Create New Playdate component
+                <View>
+                < Text style = {{fontSize: 25, paddingTop: 10}}>
+                    Create a new playdate!
                 </Text>
-                <View style={{backgroundColor: 'pink'}}>
-                    <Text style={{fontSize: 25}}>Ready to create a playdate! Click below to get started!</Text>
+                </View>
+
+                <View style={{padding: 10}}>
+                    
+                </View>
+
+
+                <View>    
                 <TouchableHighlight 
                     style={styles.button} 
                     // onPress={this.onPress}
                     onPress = {() => {Actions.NewPlaydateForm();}}
-                    underlayColor='blue'
+                    underlayColor='pink'
                 >
                     <Text>Click here</Text>   
                 </TouchableHighlight>
-                    
-                    
-                    
-                    </View>
-                </Content>
-            </Container>
-        )
-    }
+                                        
+                </View>
+            </Content>
+        </Container>
+    )
+}
 }
 
 styles = StyleSheet.create({
     container: {
-        // backgroundColor: '#DF89FB'
-        backgroundColor: 'orange'
+        // backgroundColor: '#DF89FB',
+        flexDirection: 'column',
+        backgroundColor: 'purple',
+        justifyContent: 'space-evenly'
     },
     button: {
         alignItems: 'center',
         backgroundColor: '#fff',
-        padding: 10
+        padding: 20,
+        borderRadius: 10,
+        borderWidth: 1
     }
 })

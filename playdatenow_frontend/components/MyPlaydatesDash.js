@@ -1,7 +1,10 @@
 import React, { Component} from 'react'
-import { View, StyleSheet, FlatList, ScrollView } from 'react-native'
+import { View, StyleSheet, FlatList, ScrollView, Row } from 'react-native'
 import { Container, Content, Text } from 'native-base'
 import axios from 'axios'
+// import { Ionicons } from '@expo/vector-icons'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+
 
 
 class MyPlaydatesList extends Component {
@@ -22,14 +25,27 @@ render(){
         <View>
             <FlatList
                 data = {this.state.playdates}
-                // keyExtractor = {(item) => item.toString()}
+                keyExtractor = {(item, index) => index.toString()}
                 renderItem = {({item}) => 
-                    <View>
-                        <Text style = {{fontSize: 20}}> 
+                    <View style = {{
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        backgroundColor: 'white',
+                        borderRadius: 10,
+                        borderColor: 'black',
+                        borderWidth: 1,
+                        // backgroundColor: '#DF89FB',
+                        padding: 20
+                    }}>
+                        <Text style = {{fontSize: 15}}> 
                         {item.title} 
                         </Text>
+                     
+                        < MaterialCommunityIcons 
+                            name = "delete"
+                            size = {20}
+                        />
                     </View>}
-                keyExtractor = {(item, index) => index.toString()}
             />
         </View>
     )
@@ -39,10 +55,10 @@ render(){
 export default class MyPlaydatesDash extends Component {
     render() {
         return (
-            < Container style={styles.container}>
+            <Container style={styles.container}>
                 <Content padder>
-                    <Text>
-                        MyPlaydatesDash 
+                    <Text style={{fontSize: 25}}>
+                        My Playdates
                     </Text>
 
                     <MyPlaydatesList/>
@@ -52,12 +68,3 @@ export default class MyPlaydatesDash extends Component {
         )
     }
 }
-
-styles = StyleSheet.create({
-    container: {
-        // backgroundColor: '#DF89FB'
-        // backgroundColor: 'red'
-        backgroundColor: 'white'
-    },
-
-})

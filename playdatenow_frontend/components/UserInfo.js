@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet, Button } from 'react-native'
+import { Container, Content } from 'native-base'
 import AboutPopUp from './AboutPopUp'
 
 export default class UserInfo extends Component {
@@ -8,15 +9,13 @@ export default class UserInfo extends Component {
     }
     render() {
         return (
-            <View style={{flex: 1}}>
-                <Text style = {{
-                        fontSize: 25,
-                        color: '#470060'
-                    }}>
-                    Hello, {this.state.firstName}!
-                </Text>
-                <AboutPopUp/>  
-            </View>
+            <Container>
+                <Content padder>
+                        
+                        <AboutPopUp/>  
+                    
+                </Content>
+            </Container>
         )
     }
 }

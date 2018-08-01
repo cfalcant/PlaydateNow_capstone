@@ -12,25 +12,6 @@ import Settings from './components/Settings'
 import Login from './components/Login';
 import NewPlaydateForm from './components/NewPlaydateForm';
 
-
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         <View style={{flex:11}}>
-//           {/* <Login></Login> */}
-//           <Home></Home>
-//         </View>
-//         <View  style={{flex: 1}}>  
-//           {/* <Settings></Settings> */}
-//           {/* <Playdates></Playdates> */}
-//           <TabBar></TabBar>
-//         </View>
-//       </View>
-//     );
-//   }
-// }
-
 export default class App extends Component {
   render() {
     return ( 
@@ -41,8 +22,7 @@ export default class App extends Component {
           <Scene key = "Playdates" component = {Playdates} title = "Search"/>
           <Scene key = "Settings" component = {Settings} title = "Settings" />
           <Scene key = "NewPlaydateForm" component={NewPlaydateForm} title= "Add a new playdate"/>
-          
-          
+                    
           </Scene>
         </Router>
         <TabBar/>
@@ -56,7 +36,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'stretch',
-    justifyContent: 'center',
-    // backgroundColor: '#DF89FB'
+    justifyContent: 'center'
   },
 });

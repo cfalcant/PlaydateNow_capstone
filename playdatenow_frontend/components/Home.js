@@ -8,13 +8,17 @@ import TabBarFooter from './TabBar';
 import NewPlaydateForm from './NewPlaydateForm';
 
 export default class Home extends Component {
+state = {
+    firstname: 'Carlos'
+}    
     render (){
         return (
             <View style = {{
                     flex: 1,
                     // marginTop: 50,
                     alignItems: 'stretch',
-                    backgroundColor: '#DF89FB'
+                    // backgroundColor: '#DF89FB'
+                    backgroundColor: 'purple',
             }}>
                 <View style={{
                     justifyContent: 'center',
@@ -24,6 +28,9 @@ export default class Home extends Component {
                 </View>
 
                 <View style = {{flex: 1}}>
+                    <Text style = {{fontSize: 25}}>
+                        Hello, {this.state.firstname}!
+                    </Text>
                     <UserInfo/>
                 </View>
                 < View style = {{flex: 1}}>
