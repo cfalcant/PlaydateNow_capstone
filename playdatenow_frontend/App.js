@@ -11,6 +11,7 @@ import Playdates from './components/Playdates';
 import Settings from './components/Settings'
 import Login from './components/Login';
 import NewPlaydateForm from './components/NewPlaydateForm';
+import SearchResults from './components/SearchResults';
 
 export default class App extends Component {
   render() {
@@ -18,10 +19,11 @@ export default class App extends Component {
       <View style = {styles.container}>
         <Router hideNavBar='true'>
           <Scene key="root">
-          <Scene key="Home" component={Home} title="Welcome!" initial/>
-          <Scene key = "Playdates" component = {Playdates} title = "Search"/>
+          <Scene key="Home" component={Home} title="Welcome!" />
+          <Scene key = "Playdates" component = {Playdates} title = "Search" initial/>
           <Scene key = "Settings" component = {Settings} title = "Settings" />
           <Scene key = "NewPlaydateForm" component={NewPlaydateForm} title= "Add a new playdate"/>
+          < Scene key = "SearchResults"component = {SearchResults}title = "Search Results" / >
                     
           </Scene>
         </Router>
