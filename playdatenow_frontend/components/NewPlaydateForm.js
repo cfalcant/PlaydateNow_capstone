@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TextInput, KeyboardAvoidingView, TouchableHighlight, Actions } from 'react-native'
+import { View, Text, StyleSheet, TextInput, KeyboardAvoidingView, TouchableHighlight } from 'react-native'
 import axios from 'axios'
+import { Actions } from 'react-native-router-flux'
 
 export default class NewPlaydateForm extends Component {
 
@@ -19,9 +20,15 @@ state = {
             </Text>
 
 
-                <View style={{backgroundColor: 'white', padding: 10, borderRadius: 5}}>
+                < View style = {
+                    {
+                        backgroundColor: '#7b51a5',
+                        padding: 10,
+                        borderRadius: 5
+                    }
+                } >
 
-                    <Text style={{fontSize: 25}}>Title</Text>
+                    <Text style={{fontSize: 25, color: 'white'}}>Title</Text>
                     <TextInput
                         style={{
                             height: 80,
@@ -32,11 +39,12 @@ state = {
                             borderRadius: 5,
                         }}
                         placeholder='Please enter a title here'
+                        placeholderTextColor='white'
                         // value = {this.state.description}
                         onChangeText = {(title)=> this.setState({title})}
                     />
                     
-                    <Text style={{fontSize: 25}}>Description</Text>
+                    <Text style={{fontSize: 25, color: 'white'}}>Description</Text>
 
                     < TextInput
                         style = {{
@@ -48,12 +56,13 @@ state = {
                             borderRadius: 5,
                         }}
                         placeholder = 'Please enter a brief description/notes here' 
+                        placeholderTextColor = 'white'
                         // value={this.state.description}  
                         onChangeText = {(description) => 
                             this.setState({description})}
                     />
 
-                    <Text style={{fontSize: 25}}>Category</Text>
+                    <Text style={{fontSize: 25, color: 'white'}}>Category</Text>
 
                     <TextInput
                         style = {{
@@ -65,6 +74,7 @@ state = {
                             padding: 10
                         }}
                         placeholder = 'Please enter a category'
+                        placeholderTextColor = 'white'
                         onChangeText = {(category) => 
                             this.setState({category})}
                     />
@@ -95,7 +105,11 @@ state = {
     }
 
     createPlaydate = () => {
-    axios.post('http://localhost:8000/playdates', this.state)}
+    axios.post('http://localhost:8000/playdates', this.state).then(()=>{
+        console.log('Successfully added playdate')
+        Actions.Home();
+
+    })}
 
 // createPlaydate = () => {
 //     axios.post('http://localhost:8000/playdates', this.state).then((res) => {
