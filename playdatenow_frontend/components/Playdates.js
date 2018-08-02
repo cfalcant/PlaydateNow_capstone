@@ -23,7 +23,12 @@ render () {
                         <TextInput
                             style={{height: 80, fontSize: 25}}
                             placeholder='Enter your zip code here'
+                            placeholderTextColor='#7a7a76'
+                            onChangeText = {()=>this.setState({
+                                // zipcode
+                            })}
                             // placeholder = {this.state.zipcode}
+
                         />
                             
                         <TouchableHighlight 
