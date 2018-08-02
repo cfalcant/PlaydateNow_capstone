@@ -123,7 +123,7 @@ styles = StyleSheet.create({
     },
     btn: {
         padding: 10,
-        backgroundColor: 'red',
+        backgroundColor: '#898988',
         alignItems: 'center',
         borderRadius: 5,
     }

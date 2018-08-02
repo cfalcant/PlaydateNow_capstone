@@ -17,7 +17,8 @@ state = {
                     flex: 1,
                     alignItems: 'stretch',
                     // backgroundColor: '#DF89FB'
-                    backgroundColor: '#c997fc',
+                    // backgroundColor: '#c997fc',
+                    backgroundColor: '#7b51a5',
             }}>
                 <View style={{
                     justifyContent: 'center',
@@ -27,7 +28,7 @@ state = {
                 </View>
 
                 <View style = {{flex: 1}}>
-                    <Text style = {{fontSize: 25, paddingLeft: 10, paddingBottom: 10}}>
+                    <Text style = {{fontSize: 25, paddingLeft: 10, paddingBottom: 10, color: 'white'}}>
                         Hello, {this.state.firstname}!
                     </Text>
                     <UserInfo/>

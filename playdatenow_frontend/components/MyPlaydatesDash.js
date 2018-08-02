@@ -31,8 +31,9 @@ render(){
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                         backgroundColor: 'white',
-                        borderRadius: 25,
-                        borderColor: '#c997fc',
+                        borderRadius: 5,
+                        // borderColor: '#c997fc',
+                        borderColor: '#7b51a5',
                         borderWidth: 2,
                         // backgroundColor: '#DF89FB',
                         padding: 20

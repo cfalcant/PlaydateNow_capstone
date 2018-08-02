@@ -11,10 +11,14 @@ onPress = () => {
 
 render () {
     return (
-        <Container style={{backgroundColor: '#c997fc'}}>
+        < Container style = {
+            {
+                backgroundColor: '#7b51a5'
+            }
+        } >
             <Content padder>
                 <View>
-                < Text style = {{fontSize: 25, paddingTop: 10}}>
+                < Text style = {{fontSize: 25, paddingTop: 10, color: 'white'}}>
                     Create a new playdate!
                 </Text>
                 </View>
@@ -29,15 +33,15 @@ render () {
                     style={{alignItems: 'center',
                             borderWidth: 1,
                             padding: 15,
-                            borderRadius: 25,
-                            backgroundColor: 'white'
+                            borderRadius: 5,
+                            backgroundColor: '#e0e2e5'
 
                     }} 
                     // onPress={this.onPress}
                     onPress = {() => {Actions.NewPlaydateForm();}}
-                    underlayColor='pink'
+                    underlayColor = '#c997fc'
                 >
-                    <Text style={{fontSize: 20}}>Click here</Text>   
+                    <Text style={{fontSize: 25}}>Click here</Text>   
                 </TouchableHighlight>
                                         
                 </View>
