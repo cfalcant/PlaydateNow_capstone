@@ -26,7 +26,7 @@ render(){
             <FlatList
                 data = {this.state.playdates}
                 keyExtractor = {(item, index) => index.toString()}
-                renderItem = {({item}) => 
+                renderItem = {({item, index}) => 
                     <View style = {{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
@@ -45,6 +45,8 @@ render(){
                         < MaterialCommunityIcons 
                             name = "delete"
                             size = {20}
+                            // onPress={()=>console.log('Icon pressed')}
+                            onPress = {(item) => console.log({index})}
                         />
                     
                     </View>}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, KeyboardAvoidingView } from 'react-native';
 import {
     Container,
     Header,
@@ -14,20 +14,18 @@ import { Actions } from 'react-native-router-flux'
 export default class Login extends Component {
     state = {
         email: 'Sample@mail.com',
-        password: ''
+        password: '',
     }
 
     // onPress = () => {Actions.Home();}
 
     render () {
         return (
-            <View style={styles.container}>
+            <KeyboardAvoidingView 
+                behavior='padding' 
+                style={styles.container}>
         
                 
-
-
-
-
                 <View style={{
                     alignItems: 'center',
                     paddingTop: 10}}>
@@ -83,7 +81,7 @@ export default class Login extends Component {
 
 
 
-            </View>
+            </KeyboardAvoidingView>
         )
     }
 }
