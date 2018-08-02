@@ -38,8 +38,9 @@ export default class Login extends Component {
 
                     <Item underline>
                         <Input underline
-                            value = {this.state.email}
-                            // placeholder = 'E-mail address' 
+                            style={{color: 'white'}}
+                            // value = {this.state.email}
+                            placeholder = 'E-mail address' 
                             placeholderTextColor = 'white'
                             onChangeText={(email)=>this.setState({email})}
                             
@@ -47,8 +48,12 @@ export default class Login extends Component {
                     </Item>
                     <Item underline>
                         <Input  underline
+                            style={{color: 'white'}}
                             placeholder = 'Password'
+                            // value = {this.state.password}
                             placeholderTextColor = 'white'
+                            onChangeText = {
+                                (email) => this.setState({email})}
         
 
                         />
