@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TextInput, KeyboardAvoidingView, TouchableHighlight } from 'react-native'
+import { View, Text, StyleSheet, TextInput, KeyboardAvoidingView, TouchableHighlight, Actions } from 'react-native'
 
 export default class NewPlaydateForm extends Component {
 
@@ -9,7 +9,9 @@ state = {
     category: 'toddler'
 }
 
-
+createPlaydate = () =>{
+    console.log('AddProduct btn pressed')
+}
     
     render(){
         return (
@@ -70,14 +72,12 @@ state = {
                     />
 
 
-                    <View style={{padding: 40}}>
-
-                    </View>
+                    <View style={{padding: 40}}></View>
 
                     < TouchableHighlight
                         style = {styles.btn}
-                        onPress = {() => {Actions.SearchResults();}}
-                        underlayColor = 'white'
+                        onPress = {this.createPlaydate}
+                        underlayColor = 'pink'
                         // value={this.state.zipcode}    
                     >
                         <Text style = {{fontSize: 25}}>

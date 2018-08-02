@@ -39,7 +39,7 @@ render () {
                     }} 
                     // onPress={this.onPress}
                     onPress = {() => {Actions.NewPlaydateForm();}}
-                    underlayColor = '#c997fc'
+                    underlayColor = 'pink'
                 >
                     <Text style={{fontSize: 25}}>Click here</Text>   
                 </TouchableHighlight>
