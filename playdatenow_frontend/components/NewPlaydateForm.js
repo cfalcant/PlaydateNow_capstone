@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, TextInput, KeyboardAvoidingView, TouchableHighlight, Actions } from 'react-native'
+import axios from 'axios'
 
 export default class NewPlaydateForm extends Component {
 
 state = {
     title: 'Sample title',
     description: 'Description in state',
-    category: 'toddler'
-}
-
-createPlaydate = () =>{
-    console.log('AddProduct btn pressed')
+    category: 'toddler',
+    playdate_creator: 1
 }
     
     render(){
@@ -95,6 +93,22 @@ createPlaydate = () =>{
             </View>
         )
     }
+
+    createPlaydate = () => {
+    axios.post('http://localhost:8000/playdates', this.state)}
+
+// createPlaydate = () => {
+//     axios.post('http://localhost:8000/playdates', this.state).then((res) => {
+//         if (res.data.success === true) {
+//             console.log('New playdate SUCCESS')
+//             // Actions.Products(this.state);
+//         } else {
+//             console.log('Add product error');
+//         }
+//     });
+// }
+
+
 }
 
 styles = StyleSheet.create({

@@ -9,13 +9,15 @@ import {
     Button,
     Text
 } from 'native-base';
+import { Actions } from 'react-native-router-flux'
 
 export default class Login extends Component {
     state = {
-        email: 'Carlos@gmail.com',
+        email: 'Sample@mail.com',
         password: ''
     }
 
+    // onPress = () => {Actions.Home();}
 
     render () {
         return (
@@ -38,7 +40,7 @@ export default class Login extends Component {
                         <Input underline
                             value = {this.state.email}
                             // placeholder = 'E-mail address' 
-                            placeholderTextColor = '#470060'
+                            placeholderTextColor = 'white'
                             onChangeText={(email)=>this.setState({email})}
                             
                             />
@@ -46,7 +48,7 @@ export default class Login extends Component {
                     <Item underline>
                         <Input  underline
                             placeholder = 'Password'
-                            placeholderTextColor = '#470060'
+                            placeholderTextColor = 'white'
         
 
                         />
@@ -54,7 +56,8 @@ export default class Login extends Component {
 
                     <View style={{paddingTop: 10}}>
                         <Button style={styles.submitBtnStyling} rounded success
-                                onPress={this.onSumbit}
+                                // onPress={this.onSumbit}
+                                onPress = {() => {Actions.Home();}}
                         > 
                             <Text style={styles.submitBtnText}>Submit</Text>
                         </Button>
@@ -63,7 +66,7 @@ export default class Login extends Component {
 
                     <Text style={{
                         paddingTop: 10,
-                        color: '#470060'
+                        color: 'white'
                     }}>
                         Don't have an account? Click here to register!
                     </Text>
@@ -85,14 +88,14 @@ const styles = StyleSheet.create({
         flex: 1,
         // justifyContent: 'center',
         // alignItems: 'center',
-        marginTop: 20,
         alignItems: 'stretch',
-        backgroundColor: '#DF89FB'
+        backgroundColor: '#7b51a5',
+        padding: 10
     },
     submitBtnStlying: {
         padding: 20
     },
     submitBtnText: {
-        fontSize: 20
+        fontSize: 25
     },
 })

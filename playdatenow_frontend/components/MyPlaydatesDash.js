@@ -14,7 +14,7 @@ state = {
 }
     
 componentDidMount() {
-     axios.get('http://localhost:8000/playdates')
+     axios.get('http://localhost:8000/playdates/1/myplaydates')
          .then(response => this.setState({
              playdates: response.data
          }));
