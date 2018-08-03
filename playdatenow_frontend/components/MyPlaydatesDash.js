@@ -20,13 +20,20 @@ componentDidMount() {
          }));
  }
 
+
+// deletePressed = (item, index, id) =>{
+//     console.log(item.id)
+// }
+
 render(){
     return (
         <View>
             <FlatList
+                // data = {(item)}
                 data = {this.state.playdates}
+                // keyExtractor = {(item, index) => item.id}
                 keyExtractor = {(item, index, id) => index.toString()}
-                renderItem = {({item, index, id}) => 
+                renderItem = {({item, index}) => 
                     <View style = {{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
@@ -46,7 +53,10 @@ render(){
                         < MaterialCommunityIcons 
                             name = "delete"
                             size = {20}
-                            // onPress={()=>console.log('Icon pressed')}
+                            // onPress={this.deletePressed}
+                            // onPress = {(id, key, item, index)=>{
+                            //     console.log({key: })
+                            // }}
                             // onPress = {() => console.log('trash selected')}
                         />
                     

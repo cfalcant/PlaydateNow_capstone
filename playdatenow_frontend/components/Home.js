@@ -6,11 +6,25 @@ import MyPlaydatesDash from './MyPlaydatesDash';
 import CreateNewPlaydate from './CreateNewPlaydate';
 import TabBarFooter from './TabBar';
 import NewPlaydateForm from './NewPlaydateForm';
+import { Font } from 'expo'
+
 
 export default class Home extends Component {
+
 state = {
-    firstname: 'Carlos'
-}    
+    firstname: 'Carlos',
+    fontLoaded: false,
+
+}
+
+async componentDidMount() {
+    await Font.loadAsync({
+          'varela-round-regular': require('../assets/fonts/VarelaRound-Regular.ttf'),
+      });
+    this.setState({fontLoaded: true})
+}
+
+    
     render (){
         return (
             <View style = {{
@@ -28,10 +42,23 @@ state = {
                 </View>
 
                 <View style = {{flex: 1}}>
-                    <Text style = {{fontSize: 25, paddingLeft: 10, paddingBottom: 10, color: 'white'}}>
+                    {/* <Text style = {{fontFamily: 'varela-round-regular',fontSize: 25, paddingLeft: 10, paddingBottom: 10, color: 'white'}}>
                         Hello, {this.state.firstname}!
                     </Text>
-                    <UserInfo/>
+                    <UserInfo/> */}
+                      {this.state.fontLoaded ? ( 
+                        <Text style = {{
+                            fontFamily: 'varela-round-regular',
+                            fontSize: 25,
+                            paddingLeft: 10,
+                            paddingBottom: 10,
+                            color: 'white'
+                        }}>
+                              Hello, {this.state.firstname}!
+                        </Text>
+                        ) : null
+                      }
+                      <UserInfo/>
                 </View>
                 < View style = {{flex: 1}}>
                     <CreateNewPlaydate/>
