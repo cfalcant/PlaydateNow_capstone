@@ -71,7 +71,10 @@ export default class Login extends Component {
                         paddingTop: 10,
                         color: 'white'
                     }}>
-                        Don't have an account? Click here to register!
+                        Don't have an account? 
+                    </Text>
+                    <Text style={{paddingTop: 10}}>
+                        Click here to register!
                     </Text>
                 </View>
                 

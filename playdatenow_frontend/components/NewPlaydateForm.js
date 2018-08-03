@@ -106,7 +106,7 @@ state = {
 
     createPlaydate = () => {
     axios.post('http://localhost:8000/playdates', this.state).then(()=>{
-        console.log('Successfully added playdate')
+        // console.log('Successfully added playdate')
         Actions.Home();
 
     })}
