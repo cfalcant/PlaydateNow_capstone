@@ -57,7 +57,7 @@ export default class Login extends Component {
                         />
                     </Item>
 
-                    <View style={{paddingTop: 10}}>
+                    <View style={{paddingTop: 30}}>
                         <Button style={styles.submitBtnStyling} rounded success
                                 // onPress={this.onSumbit}
                                 onPress = {() => {Actions.Home();}}
@@ -65,7 +65,9 @@ export default class Login extends Component {
                             <Text style={styles.submitBtnText}>Submit</Text>
                         </Button>
                     </View>
+                    <View style={{padding: 20}}>
 
+                    </View>
 
                     <Text style={{
                         paddingTop: 10,
@@ -73,7 +75,12 @@ export default class Login extends Component {
                     }}>
                         Don't have an account? 
                     </Text>
-                    <Text style={{paddingTop: 10}}>
+
+                    <View style={{padding: 10}}>
+
+                    </View>
+
+                    <Text style={{paddingTop: 10, color: 'white'}}>
                         Click here to register!
                     </Text>
                 </View>

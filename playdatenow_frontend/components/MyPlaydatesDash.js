@@ -25,8 +25,8 @@ render(){
         <View>
             <FlatList
                 data = {this.state.playdates}
-                keyExtractor = {(item, index) => index.toString()}
-                renderItem = {({item, index}) => 
+                keyExtractor = {(item, index, id) => index.toString()}
+                renderItem = {({item, index, id}) => 
                     <View style = {{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
@@ -47,7 +47,7 @@ render(){
                             name = "delete"
                             size = {20}
                             // onPress={()=>console.log('Icon pressed')}
-                            onPress = {(item) => console.log({index})}
+                            // onPress = {() => console.log('trash selected')}
                         />
                     
                     </View>}
