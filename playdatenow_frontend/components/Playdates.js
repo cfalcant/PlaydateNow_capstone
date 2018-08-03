@@ -64,19 +64,23 @@ render () {
                             })}>
                                 <Picker.Item
                                     label = "Newborn"
-                                    value = "newborn" 
+                                    value = "Newborn" 
                                 />
                                 <Picker.Item
                                     label = "Infant"
-                                    value = "infant" 
+                                    value = "Infant" 
                                 />
                                 <Picker.Item
                                     label = "Toddler"
-                                    value = "toddler" 
+                                    value = "Toddler" 
                                 />
                                 <Picker.Item
                                     label = "Prechooler"
-                                    value = "preschooler" 
+                                    value = "Preschooler" 
+                                />
+                                <Picker.Item
+                                label = "All"
+                                value = "All" 
                                 />
                         </Picker>
                     </View>

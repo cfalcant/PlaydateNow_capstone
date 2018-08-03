@@ -50,6 +50,15 @@ render(){
                         {item.title} 
                         </Text>
                      
+                        < MaterialCommunityIcons
+                        name = "table-edit"
+                        size = {20}
+                        // onPress={this.deletePressed}
+                        // onPress = {(id, key, item, index)=>{
+                        //     console.log({key: })
+                        // }}
+                        // onPress = {() => console.log('trash selected')}
+                        />
                         < MaterialCommunityIcons 
                             name = "delete"
                             size = {20}
@@ -59,6 +68,7 @@ render(){
                             // }}
                             // onPress = {() => console.log('trash selected')}
                         />
+                        
                     
                     </View>}
             />
