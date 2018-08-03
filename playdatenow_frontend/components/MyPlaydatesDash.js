@@ -39,6 +39,7 @@ render(){
                         padding: 20
                     }}>
                         <Text style = {{fontSize:15}}> 
+                        
                         {item.title} 
                         </Text>
                      
