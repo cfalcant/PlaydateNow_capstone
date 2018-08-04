@@ -30,7 +30,7 @@ router.get('/:id/playdates', function (req, res) {
 router.get('/:id/myplaydates', function(req, res){
     knex('playdates')
         .join('users', 'users.id', '=', 'playdates.playdate_creator')
-        .select('playdates.title', 'playdates.description', 'playdates.category')
+        .select('playdates.title', 'playdates.description', 'playdates.category', 'playdates.id')
         .where('users.id', req.params.id)
         .then((ownPlaydates)=>{
             res.json(ownPlaydates)

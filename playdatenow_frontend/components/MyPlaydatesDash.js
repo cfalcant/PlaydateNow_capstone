@@ -2,6 +2,7 @@ import React, { Component} from 'react'
 import { View, StyleSheet, FlatList, ScrollView, Row } from 'react-native'
 import { Container, Content, Text } from 'native-base'
 import axios from 'axios'
+import { Actions } from 'react-native-router-flux'
 // import { Ionicons } from '@expo/vector-icons'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
@@ -21,8 +22,11 @@ componentDidMount() {
  }
 
 
-// deletePressed = (item, index, id) =>{
-//     console.log(item.id)
+// deletePressed = ({item}) =>{
+//     console.log('DELETE', id)
+    // axios.delete('http://localhost:8000/playdates/{req.params.id}/', this.state).then(()=>{
+    //     Actions.Home();
+    // })
 // }
 
 render(){
@@ -33,7 +37,7 @@ render(){
                 data = {this.state.playdates}
                 // keyExtractor = {(item, index) => item.id}
                 keyExtractor = {(item, index, id) => index.toString()}
-                renderItem = {({item, index}) => 
+                renderItem = {({item, index,}) => 
                     <View style = {{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
@@ -47,26 +51,46 @@ render(){
                     }}>
                         <Text style = {{fontSize:15}}> 
                         
-                        {item.title} 
+                        {/* {JSON.stringify(this.state.playdates.playdates)} */}
+                        {item.id} 
+                        {item.title}
+                    
                         </Text>
                      
                         < MaterialCommunityIcons
+                        id = {item.id}
                         name = "table-edit"
                         size = {20}
                         // onPress={this.deletePressed}
                         // onPress = {(id, key, item, index)=>{
                         //     console.log({key: })
                         // }}
-                        // onPress = {() => console.log('trash selected')}
+                        // onPress = {() => console.log('ITEM: ', this.state.playdates)}
+                        onPress = {
+                            () => console.log('EDIT',item.id)
+                        }
                         />
                         < MaterialCommunityIcons 
                             name = "delete"
                             size = {20}
+                            id = {item.id}
                             // onPress={this.deletePressed}
-                            // onPress = {(id, key, item, index)=>{
-                            //     console.log({key: })
-                            // }}
-                            // onPress = {() => console.log('trash selected')}
+                            // onPress = {() => console.log('DELETE',item.id)}
+                            // onPress = {
+                            //     axios.delete('http://localhost:8000/playdates/:${item.id}', this.state).then(()=>{
+                            //         Actions.Home();
+                            //     })
+                            // }
+                            // app.get('/playdates/:id',function(req,res){
+                            //      req.params.id  
+                            // })
+                            onPress = {()=>{
+                                axios.delete(`http://localhost:8000/playdates/${item.id}`, this.state).then(() => {
+                                    Actions.Home();
+                                }).catch((error)=>{
+                                    console.log(error)
+                                })
+                            }}
                         />
                         
                     
