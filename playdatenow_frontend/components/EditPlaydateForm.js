@@ -20,9 +20,26 @@ import {
 
 export default class EditPlaydateForm extends Component {
 
-componentDidMount(){
-    axios.get()
+state = {
+    playdate: []
+}    
+
+// componentDidMount(){
+//     axios.get(`http://localhost:8000/playdates/25`, this.state)
+// }
+componentDidMount() {
+    axios.get('http://localhost:8000/playdates/25')
+        .then(response => this.setState({
+            playdate: response.data
+        }));
 }
+
+// onPress = ()=>{
+//     axios.delete(`http://localhost:8000/playdates/${item.id}`, this.state).then(() => {
+//         Actions.Home();
+// }).catch((error)=>{
+//     console.log(error)
+// })}
 
 // state = {
 //     title: 'Sample title',
@@ -30,9 +47,6 @@ componentDidMount(){
 //     category: 'toddler',
 //     playdate_creator: 1
 // }
-state = {
-    playdate: []
-}
 
     render() {
         return ( 
@@ -45,7 +59,8 @@ state = {
                 fontSize: 25
                 }}>
                     {/* Please edit the playdate below: */}
-                    {/* {args} */}
+                    {/* {JSON.stringify(this.state.playdate)} */}
+                    {this.state.playdate.id} 
             </Text>
 
 
@@ -71,7 +86,7 @@ state = {
                 }}
                 // placeholder = 'Please enter a title here'
                 placeholderTextColor = 'white'
-                value = {this.state.title}
+                value = {this.state.playdate.title}
                 onChangeText = {
                     (title) => this.setState({
                         title
@@ -95,7 +110,7 @@ state = {
                 }}
             // placeholder = 'Please enter a brief description/notes here'
             placeholderTextColor = 'white'
-            value={this.state.description}  
+            value={this.state.playdate.description}  
             onChangeText = {
                 (description) =>
                 this.setState({
@@ -119,6 +134,7 @@ state = {
             }}
             placeholder = 'Please enter a category'
             placeholderTextColor = 'white'
+            value = {this.state.playdate.description}
             onChangeText = {
                 (category) =>
                 this.setState({
@@ -131,7 +147,10 @@ state = {
             </View>
 
             <TouchableHighlight style = {styles.btn}
-            onPress = {this.createPlaydate}
+            // onPress = {this.createPlaydate}
+            onPress = {()=>{
+                Actions.Home()
+            }}
             underlayColor = 'pink'
             // value={this.state.zipcode}    
             >
@@ -153,8 +172,8 @@ state = {
         )
     }
 
-    createPlaydate = () => {
-        axios.post('http://localhost:8000/playdates', this.state).then(() => {
+    editPlaydate = () => {
+        axios.put(`http://localhost:8000/playdates/${id}`, this.state).then(() => {
             // console.log('Successfully added playdate')
             Actions.Home();
 
