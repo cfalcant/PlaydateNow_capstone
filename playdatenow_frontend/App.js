@@ -12,6 +12,7 @@ import Settings from './components/Settings'
 import Login from './components/Login';
 import NewPlaydateForm from './components/NewPlaydateForm';
 import SearchResults from './components/SearchResults';
+import EditPlaydateForm from './components/EditPlaydateForm';
 
 export default class App extends Component {
   render() {
@@ -25,6 +26,7 @@ export default class App extends Component {
           <Scene key = "Settings" component = {Settings} title = "Settings" />
           <Scene key = "NewPlaydateForm" component={NewPlaydateForm} title= "Add a new playdate" />
           < Scene key = "SearchResults"component = {SearchResults}title = "Search Results" / >
+          < Scene key = "EditPlaydateForm" component = {EditPlaydateForm} title = "Edit playdate" / >
                     
           </Scene>
         </Router>

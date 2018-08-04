@@ -61,13 +61,11 @@ render(){
                         id = {item.id}
                         name = "table-edit"
                         size = {20}
-                        // onPress={this.deletePressed}
-                        // onPress = {(id, key, item, index)=>{
-                        //     console.log({key: })
-                        // }}
-                        // onPress = {() => console.log('ITEM: ', this.state.playdates)}
+                        // onPress = {
+                        //     () => console.log('EDIT',item.id)
+                        // }
                         onPress = {
-                            () => console.log('EDIT',item.id)
+                            () => Actions.EditPlaydateForm()
                         }
                         />
                         < MaterialCommunityIcons 
