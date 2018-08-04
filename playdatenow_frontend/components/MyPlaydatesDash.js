@@ -65,7 +65,7 @@ render(){
                         //     () => console.log('EDIT',item.id)
                         // }
                         onPress = {
-                            () => Actions.EditPlaydateForm()
+                            () => Actions.EditPlaydateForm(this.state.playdates)
                         }
                         />
                         < MaterialCommunityIcons 

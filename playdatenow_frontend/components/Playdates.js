@@ -88,6 +88,7 @@ render () {
                     <View style={{flex: .9}}>
                         <TouchableHighlight
                             style = {styles.btn}
+                            // style = {{backgroundColor: 'red'}}
                             onPress = {() => {Actions.SearchResults();}}
                             underlayColor = 'white'
                             // value={this.state.zipcode}    
@@ -111,7 +112,8 @@ styles = StyleSheet.create({
     screenContainer: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'stretch'
+        alignItems: 'stretch',
+        padding: 10
     },
     topContainer:{
             flex: 1,
@@ -127,7 +129,8 @@ styles = StyleSheet.create({
     },
     btn: {
         padding: 10,
-        backgroundColor: '#898988',
+        // backgroundColor: '#898988',
+        backgroundColor: 'red',
         alignItems: 'center',
         borderRadius: 5,
     }

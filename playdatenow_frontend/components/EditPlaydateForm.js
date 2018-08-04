@@ -14,14 +14,25 @@ import {
     Actions
 } from 'react-native-router-flux'
 
+// class EditedPlaydate extends Component {
+
+// }
+
 export default class EditPlaydateForm extends Component {
 
-    state = {
-        title: 'Sample title',
-        description: 'Description in state',
-        category: 'toddler',
-        playdate_creator: 1
-    }
+componentDidMount(){
+    axios.get()
+}
+
+// state = {
+//     title: 'Sample title',
+//     description: 'Description in state',
+//     category: 'toddler',
+//     playdate_creator: 1
+// }
+state = {
+    playdate: []
+}
 
     render() {
         return ( 
@@ -33,7 +44,8 @@ export default class EditPlaydateForm extends Component {
             <Text style = {{
                 fontSize: 25
                 }}>
-            Please edit the playdate below:
+                    {/* Please edit the playdate below: */}
+                    {/* {args} */}
             </Text>
 
 
@@ -57,9 +69,9 @@ export default class EditPlaydateForm extends Component {
                     borderColor: '#c997fc',
                     borderRadius: 5,
                 }}
-                placeholder = 'Please enter a title here'
+                // placeholder = 'Please enter a title here'
                 placeholderTextColor = 'white'
-                // value = {this.state.description}
+                value = {this.state.title}
                 onChangeText = {
                     (title) => this.setState({
                         title
@@ -81,9 +93,9 @@ export default class EditPlaydateForm extends Component {
                 borderColor: '#c997fc',
                 borderRadius: 5,
                 }}
-            placeholder = 'Please enter a brief description/notes here'
+            // placeholder = 'Please enter a brief description/notes here'
             placeholderTextColor = 'white'
-            // value={this.state.description}  
+            value={this.state.description}  
             onChangeText = {
                 (description) =>
                 this.setState({
