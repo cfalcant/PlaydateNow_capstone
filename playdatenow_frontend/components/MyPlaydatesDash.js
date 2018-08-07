@@ -65,7 +65,10 @@ render(){
                         //     () => console.log('EDIT',item.id)
                         // }
                         onPress = {
-                            () => Actions.EditPlaydateForm({item})
+                            () => Actions.EditPlaydateForm(item)
+                            // ()=> console.log(item.id)
+                            // ()=>console.log(item)
+                            // ()=>console.log('hello world')
                         }
                         />
                         < MaterialCommunityIcons 

@@ -21,18 +21,28 @@ import {
 export default class EditPlaydateForm extends Component {
 
 state = {
-    playdate: []
+    title: '',
+    description: '',
+    category: '',
+    playdate_creator: 1
 }    
 
-// componentDidMount(){
-//     axios.get(`http://localhost:8000/playdates/25`, this.state)
+
+// componentDidMount() {
+//     axios.get(`http://localhost:8000/playdates/${item.id}`)
+//         .then(response => this.setState({
+//             playdates: response.data
+//         }));
+// }
+// componentDidMount() {
+//     axios.get(`http://localhost:8000/playdates/25`)
+//         .then(response => this.setState({
+//             playdate: response.data
+//         }));
 // }
 componentDidMount() {
-    axios.get('http://localhost:8000/playdates/25')
-        .then(response => this.setState({
-            playdate: response.data
-        }));
-}
+            console.log(this.props)
+        }
 
 // onPress = ()=>{
 //     axios.delete(`http://localhost:8000/playdates/${item.id}`, this.state).then(() => {
@@ -58,9 +68,9 @@ componentDidMount() {
             <Text style = {{
                 fontSize: 25
                 }}>
-                    {/* Please edit the playdate below: */}
                     {/* {JSON.stringify(this.state.playdate)} */}
-                    {this.state.playdate.id} 
+                    {/* {this.props.id}  */}
+                    Please edit the playdate below:
             </Text>
 
 
@@ -86,11 +96,8 @@ componentDidMount() {
                 }}
                 // placeholder = 'Please enter a title here'
                 placeholderTextColor = 'white'
-                value = {this.state.playdate.title}
-                onChangeText = {
-                    (title) => this.setState({
-                        title
-                    })}
+                value = {this.props.title}
+                onChangeText = {title => this.setState({title})}
                 />
 
             <Text style = {{
@@ -110,7 +117,7 @@ componentDidMount() {
                 }}
             // placeholder = 'Please enter a brief description/notes here'
             placeholderTextColor = 'white'
-            value={this.state.playdate.description}  
+            value={this.props.description}  
             onChangeText = {
                 (description) =>
                 this.setState({
@@ -134,7 +141,7 @@ componentDidMount() {
             }}
             placeholder = 'Please enter a category'
             placeholderTextColor = 'white'
-            value = {this.state.playdate.description}
+            value = {this.props.category}
             onChangeText = {
                 (category) =>
                 this.setState({
@@ -177,8 +184,7 @@ componentDidMount() {
             // console.log('Successfully added playdate')
             Actions.Home();
 
-        })
-    }
+        })}
 
 }
 
