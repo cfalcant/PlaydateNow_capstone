@@ -19,6 +19,7 @@ export default class App extends Component {
     return ( 
       <View style = {styles.container}>
         <Router hideNavBar='true'>
+          {/* < Scene key = "Login" component = {Login} title = "Login" initial / > */}
           <Scene key="root">
           < Scene key = "Login" component = {Login} title = "Login" initial />
           <Scene key="Home" component={Home} title="Welcome!" />
