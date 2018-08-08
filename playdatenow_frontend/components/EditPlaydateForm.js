@@ -41,7 +41,7 @@ state = {
 //         }));
 // }
 componentDidMount() {
-            console.log(this.props)
+            console.log(this.props.id)
         }
 
 // onPress = ()=>{
@@ -97,7 +97,8 @@ componentDidMount() {
                 // placeholder = 'Please enter a title here'
                 placeholderTextColor = 'white'
                 value = {this.props.title}
-                onChangeText = {title => this.setState({title})}
+                // onChangeText = {title => this.setState({title})}
+                onChangeText = {(title) => this.setState({title})}
                 />
 
             <Text style = {{
@@ -117,7 +118,8 @@ componentDidMount() {
                 }}
             // placeholder = 'Please enter a brief description/notes here'
             placeholderTextColor = 'white'
-            value={this.props.description}  
+            value={this.props.description}
+            // value = {this.state.title}
             onChangeText = {
                 (description) =>
                 this.setState({
@@ -155,9 +157,7 @@ componentDidMount() {
 
             <TouchableHighlight style = {styles.btn}
             // onPress = {this.createPlaydate}
-            onPress = {()=>{
-                Actions.Home()
-            }}
+            onPress = {this.editPlaydate}
             underlayColor = 'pink'
             // value={this.state.zipcode}    
             >
@@ -180,11 +180,16 @@ componentDidMount() {
     }
 
     editPlaydate = () => {
-        axios.put(`http://localhost:8000/playdates/${id}`, this.state).then(() => {
+        axios.put(`http://localhost:8000/playdates/${this.props.navigation.state.params.id}`, this.state).then(() => {
             // console.log('Successfully added playdate')
             Actions.Home();
 
         })}
+    // editPlaydate = () => {
+    //     console.log(this.state)
+    //     console.log(this.props.navigation.state.params.id)
+    //     Actions.Home();
+    // }
 
 }
 

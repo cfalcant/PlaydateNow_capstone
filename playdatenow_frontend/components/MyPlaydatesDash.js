@@ -52,7 +52,7 @@ render(){
                         <Text style = {{fontSize:15}}> 
                         
                         {/* {JSON.stringify(this.state.playdates.playdates)} */}
-                        {item.id} 
+                        {/* {item.id}  */}
                         {item.title}
                     
                         </Text>
